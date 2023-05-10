@@ -1,7 +1,11 @@
+using System.Globalization;
+
 namespace Calculudaor
 {
     public partial class Form1 : Form
     {
+        decimal valor1 = 0, valor2 = 0;
+        string operecao = " ";
         public Form1()
         {
             InitializeComponent();
@@ -14,17 +18,26 @@ namespace Calculudaor
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            valor1 = decimal.Parse(txtResultado.Text, CultureInfo.InvariantCulture);
+            txtResultado.Text = "";
+            operecao = "subtracao";
+            labelOperecao.Text = "-";
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            valor1 = decimal.Parse(txtResultado.Text, CultureInfo.InvariantCulture);
+            txtResultado.Text = "";
+            operecao = "multiplicacao";
+            labelOperecao.Text = "*";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            valor1 = decimal.Parse(txtResultado.Text, CultureInfo.InvariantCulture);
+            txtResultado.Text = "";
+            operecao = "soma";
+            labelOperecao.Text = "+";
         }
 
         private void txtResultado_TextChanged(object sender, EventArgs e)
@@ -80,6 +93,41 @@ namespace Calculudaor
         private void button16_Click(object sender, EventArgs e)
         {
 
+            txtResultado.Text = txtResultado.Text + "0";
+
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            valor2 = decimal.Parse(txtResultado.Text, CultureInfo.InvariantCulture);
+
+            if (operecao == "soma")
+            {
+                txtResultado.Text = Convert.ToString(valor1 + valor2);
+            }
+            else if (operecao == "subtracao")
+            {
+                txtResultado.Text = Convert.ToString(valor1 - valor2);
+            }
+            else if (operecao == "multiplicacao")
+            {
+                txtResultado.Text = Convert.ToString(valor1 * valor2);
+
+            }
+            else if (operecao == "divisao")
+            {
+                txtResultado.Text = Convert.ToString(valor1 / valor2);
+            }
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            valor1 = decimal.Parse(txtResultado.Text, CultureInfo.InvariantCulture);
+            txtResultado.Text = "";
+            operecao = "divisao";
+            labelOperecao.Text = "/";
         }
     }
 }

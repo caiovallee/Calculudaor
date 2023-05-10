@@ -33,7 +33,7 @@
             btn7 = new Button();
             btn8 = new Button();
             btn9 = new Button();
-            button4 = new Button();
+            btnSoma = new Button();
             btn4 = new Button();
             btn5 = new Button();
             btn6 = new Button();
@@ -95,15 +95,15 @@
             btn9.UseVisualStyleBackColor = true;
             btn9.Click += btn9_Click;
             // 
-            // button4
+            // btnSoma
             // 
-            button4.Location = new Point(247, 101);
-            button4.Name = "button4";
-            button4.Size = new Size(66, 53);
-            button4.TabIndex = 5;
-            button4.Text = "+";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btnSoma.Location = new Point(247, 101);
+            btnSoma.Name = "btnSoma";
+            btnSoma.Size = new Size(66, 53);
+            btnSoma.TabIndex = 5;
+            btnSoma.Text = "+";
+            btnSoma.UseVisualStyleBackColor = true;
+            btnSoma.Click += button4_Click;
             // 
             // btn4
             // 
@@ -153,6 +153,7 @@
             button10.TabIndex = 11;
             button10.Text = "=";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // btn1
             // 
@@ -212,6 +213,7 @@
             button20.TabIndex = 21;
             button20.Text = "/";
             button20.UseVisualStyleBackColor = true;
+            button20.Click += button20_Click;
             // 
             // Form1
             // 
@@ -229,7 +231,7 @@
             Controls.Add(btn6);
             Controls.Add(btn5);
             Controls.Add(btn4);
-            Controls.Add(button4);
+            Controls.Add(btnSoma);
             Controls.Add(btn9);
             Controls.Add(btn8);
             Controls.Add(btn7);
@@ -251,7 +253,7 @@
         private Button btn7;
         private Button btn8;
         private Button btn9;
-        private Button button4;
+        private Button btnSoma;
         private Button button5;
         private Button btn4;
         private Button btn5;
